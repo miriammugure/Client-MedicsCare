@@ -1,6 +1,8 @@
 import React from "react";
 import "./Hero.css";
 import heroImg from "../../../assets/her.webp";
+import { GiMedicines } from "react-icons/gi";
+
 function Hero() {
   return (
     <div>
@@ -11,6 +13,9 @@ function Hero() {
         <div className="HeroInfo">
           <div className="heroText">
             {" "}
+            <div className="heroIcon">
+              <GiMedicines />
+            </div>
             <h2>on a pursuit of better medicine</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cum

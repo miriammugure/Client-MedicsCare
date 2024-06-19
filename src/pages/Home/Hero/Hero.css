@@ -20,6 +20,7 @@
 .heroImage img:hover {
   transform: scale(1.2);
 }
+
 .HeroInfo {
   display: flex;
   flex-direction: column;
@@ -28,6 +29,10 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.heroIcon svg {
+  font-size: 2rem;
 }
 .heroText {
   display: flex;
