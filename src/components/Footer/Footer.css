@@ -1,0 +1,19 @@
+.footerContainer {
+  background-color: var(--blackish-color);
+  border: 2px solid white;
+}
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  padding: 0.5rem;
+}
+.Footertext {
+  color: var(--lightblue-color);
+}
+.Footertext p {
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  text-align: center;
+  font-size: 1rem;
+}
