@@ -11,9 +11,10 @@ function Hero() {
         <div className="HeroInfo">
           <div className="heroText">
             {" "}
+            <h2>on a pursuit of better medicine</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestiae aut necessitatibus temporibus nulla alias asperiores?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cum
+              autem. Aperiam exercitationem reprehenderit aut.
             </p>
           </div>
           <div className="cta">
