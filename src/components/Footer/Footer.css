@@ -5,7 +5,7 @@
 .footerNav {
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
+
   padding: 0.5rem;
 }
 .Footertext {
