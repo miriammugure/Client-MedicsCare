@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import heroImg from "../../../assets/her.webp";
 import { GiMedicines } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
             <div className="heroIcon">
               <GiMedicines />
             </div>
-            <h2>on a pursuit of better medicine</h2>
+            <h2>in pursuit of better medicine</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cum
               autem. Aperiam exercitationem reprehenderit aut.
@@ -25,11 +26,15 @@ function Hero() {
           <div className="cta">
             <div className="cta1">
               {" "}
-              <p>sign up &rarr;</p>
+              <Link to="/Register" className="aboutLink">
+                sign up &rarr;
+              </Link>
             </div>
             <div className="cta1">
               {" "}
-              <p>sign in &rarr;</p>
+              <Link to="/Login" className="aboutLink">
+                sign in &rarr;
+              </Link>
             </div>
           </div>
         </div>

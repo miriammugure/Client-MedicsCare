@@ -62,7 +62,7 @@
 }
 .cta1 {
   background-color: var(--blackish-color);
-  color: var(--lightblue-color);
+
   height: 3rem;
   display: flex;
   padding: 1rem;
@@ -78,7 +78,14 @@
 }
 .cta1:hover {
   background-color: var(--lightblue-color);
-  color: var(--blackish-color);
+
+  .aboutLink {
+    color: var(--blackish-color);
+  }
+}
+.aboutLink {
+  color: var(--lightblue-color);
+  text-decoration: none;
 }
 @media screen and (max-width: 820px) {
   .heroContainer {

@@ -1,0 +1,86 @@
+.registerContainer {
+  display: flex;
+  border-top: 2px solid var(--lightblue-color);
+  border-bottom: 2px solid var(--lightblue-color);
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: var(--blackish-color);
+}
+.formContainer {
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--dark-blue);
+  color: var(--lightblue-color);
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+form input {
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+}
+form input:focus {
+  border-bottom: 2px solid black;
+}
+.selectdropdown {
+  padding: 1rem 0.5rem 4rem 0.5rem;
+}
+.selectdropdown select {
+  width: 100%;
+}
+form p {
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  text-transform: capitalize;
+  color: white;
+}
+form label {
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+form button {
+  margin: 1rem;
+  height: 3rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  background-color: var(--lightblue-color);
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+.registerIMg {
+  width: 40%;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+.registerIMg img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 2s ease-in-out;
+}
+.registerIMg img:hover {
+  transform: scale(1.2);
+}

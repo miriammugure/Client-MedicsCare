@@ -80,7 +80,7 @@ function About() {
                     <LuCheckCircle />
                   </div>
                   <div className="ctaText">
-                    <a href="#">browse our website</a>
+                    <a href="#">make an appointment</a>
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ function About() {
                     <LuCheckCircle />
                   </div>
                   <div className="ctaText">
-                    <a href="#">browse our website</a>
+                    <a href="#">visit us</a>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,5 @@
 .footerContainer {
   background-color: var(--blackish-color);
-  border: 2px solid white;
 }
 .footerNav {
   display: flex;

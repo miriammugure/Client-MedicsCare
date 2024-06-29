@@ -1,5 +1,5 @@
 .aboutContainer {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: var(--dark-blue);
   padding: 1rem 2rem;
   display: flex;
@@ -30,8 +30,11 @@
   border: 2px solid var(--lightblue-color);
   border-radius: 10px;
   color: var(--lightblue-color);
+  transition: all 1s ease-in-out;
 }
-
+.topContainer:hover {
+  transform: translateY(-10px);
+}
 .aboutIcon svg {
   font-size: 3rem;
   /* color: var(--blackish-color); */
@@ -139,11 +142,13 @@
   border-radius: 10px;
   text-transform: capitalize;
   font-family: var(--primary-font);
-  transition: all 1s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 .aboutBtn button:hover {
   transform: translateY(-5px);
+  background-color: var(--lightblue-color);
+  color: #000;
 }
 
 @media screen and (max-width: 864px) {

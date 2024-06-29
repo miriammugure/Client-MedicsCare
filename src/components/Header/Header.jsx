@@ -16,21 +16,21 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/About" className="link">
+              <Link to="/Services" className="link">
                 about
               </Link>
             </li>
             <li>
-              <Link to="/Services" className="link">
+              <Link to="/Pharmacy" className="link">
                 services
               </Link>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link to="/Doctors" className="link">
                 doctors
               </Link>
-            </li>
+            </li> */}
             <li>
               {" "}
               <Link to="/Contact" className="link">
