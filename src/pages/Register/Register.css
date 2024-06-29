@@ -12,6 +12,7 @@
 .formContainer {
   width: 50%;
   padding: 2rem;
+  border-radius: 20px;
   background-color: white;
 }
 form {
@@ -66,6 +67,12 @@ form button {
   justify-content: center;
   display: flex;
   text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+form button:hover {
+  background-color: var(--blackish-color);
+  color: white;
+  border: 2px solid var(--lightblue-color);
 }
 .registerIMg {
   width: 40%;

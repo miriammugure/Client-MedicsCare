@@ -7,7 +7,7 @@ function Login() {
     <div>
       <div className="registerContainer">
         <div className="formContainer">
-          <Title title="register here" />
+          <Title title="log in here" />
           <form action="">
             <label htmlFor="email">email:</label>
             <input type="text" placeholder="johndoe@example.com" />
