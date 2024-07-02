@@ -8,7 +8,7 @@ function Register() {
       <div className="registerContainer">
         <div className="formContainer">
           <Title title="register here" />
-          <form action="">
+          <form action="" className="registerform">
             <label htmlFor="firstName">first name:</label>
             <input type="text" placeholder="john" />
 

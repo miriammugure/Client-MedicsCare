@@ -15,7 +15,7 @@
   border-radius: 20px;
   background-color: white;
 }
-form {
+.registerform {
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -24,13 +24,13 @@ form {
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-form input {
+.registerform input {
   height: 2.5rem;
   border-radius: 10px;
   padding: 1rem;
   border: none;
 }
-form input:focus {
+.registerform input:focus {
   border-bottom: 2px solid black;
 }
 .selectdropdown {
@@ -39,20 +39,20 @@ form input:focus {
 .selectdropdown select {
   width: 100%;
 }
-form p {
+.registerform p {
   font-size: 1rem;
   font-family: var(--primary-font);
   text-transform: capitalize;
   color: white;
 }
-form label {
+.registerform label {
   text-transform: capitalize;
   font-family: var(--primary-font);
   font-size: 1rem;
   font-weight: 500;
 }
 
-form button {
+.registerform button {
   margin: 1rem;
   height: 3rem;
   text-transform: capitalize;
@@ -69,7 +69,7 @@ form button {
   text-align: center;
   transition: all 0.5s ease-in-out;
 }
-form button:hover {
+.registerform button:hover {
   background-color: var(--blackish-color);
   color: white;
   border: 2px solid var(--lightblue-color);
@@ -90,4 +90,16 @@ form button:hover {
 }
 .registerIMg img:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 1000px) {
+  .registerContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 98vw;
+  }
+  .registerIMg {
+    width: 98vw;
+  }
 }

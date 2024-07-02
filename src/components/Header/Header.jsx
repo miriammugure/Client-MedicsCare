@@ -17,12 +17,12 @@ function Header() {
             </li>
             <li>
               <Link to="/Services" className="link">
-                about
+                Services
               </Link>
             </li>
             <li>
               <Link to="/Pharmacy" className="link">
-                services
+                pharmacy
               </Link>
             </li>
             {/* <li>

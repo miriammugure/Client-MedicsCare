@@ -1,5 +1,8 @@
 .form {
   min-height: 100vh;
+  border-top: 2px var(--lightblue-color) solid;
+  border-bottom: 2px var(--lightblue-color) solid;
+  background-color: var(--blackish-color);
 }
 .formContacts {
   height: 50%;
@@ -8,14 +11,13 @@
   gap: 2rem;
   align-items: center;
   padding: 2rem;
-  background-color: white;
 }
 .input-form {
   display: flex;
   flex-direction: column;
-  background-color: var(--white-color);
+  background-color: white;
   border-radius: 10px;
-  color: var(--gold-color);
+
   width: 50%;
   padding: 2rem;
   min-height: 36rem;
@@ -90,10 +92,10 @@ textarea {
   border: 2px solid var(--lightblue-color);
 }
 .companyDetails {
-  border: 2px solid var(--white-color);
+  border: 2px solid white;
   border-radius: 10px;
-  background-color: var(--dark-blue);
-  color: white;
+  background-color: white;
+  color: var(--blackish-color);
   display: flex;
   flex-direction: column;
   box-shadow: -7px 10px 14px -1px rgba(0, 0, 0, 0.75);
@@ -160,8 +162,8 @@ textarea {
   height: 450px; /* Ensure the height is explicitly set */
 }
 .mapText {
-  background-color: var(--dark-green);
-  color: var(--gold-color);
+  background-color: white;
+  color: var(--blackish-color);
   padding: 2rem;
   box-shadow: -7px 10px 14px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -7px 10px 14px -1px rgba(0, 0, 0, 0.75);
@@ -182,6 +184,7 @@ iframe {
   width: 100%;
   /* position: absolute; */
   border: 0;
+  border-radius: 10px;
 }
 @media screen and (max-width: 588px) {
   .map {
