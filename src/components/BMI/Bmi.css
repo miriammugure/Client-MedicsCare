@@ -23,7 +23,7 @@
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   background-color: white;
-  border-radius: 10px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +67,7 @@
   text-transform: capitalize;
   font-family: var(--primary-font);
   background-color: var(--dark-blue);
+  cursor: pointer;
   color: var(--lightblue-color);
 }
 .flex p {

@@ -10,6 +10,8 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Contact from "./pages/Contact/Contact";
 import Patient from "./pages/Patient/Patient";
+import Expectancy from "./pages/Expectancy/Expectancy";
+import Pharmacy from "./pages/Pharmacy/Pharmacy";
 function App() {
   return (
     <>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Patient" element={<Patient />} />
+          <Route path="Expectancy" element={<Expectancy />} />
+          <Route path="Pharmacy" element={<Pharmacy />} />
         </Routes>
         <Footer />
       </BrowserRouter>
