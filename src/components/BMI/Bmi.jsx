@@ -2,6 +2,7 @@ import React from "react";
 import "./Bmi.css";
 import Title from "../Title/Title";
 import bmiimg from "../../assets/bmi.jpeg";
+
 function Bmi() {
   return (
     <div>

@@ -1,6 +1,24 @@
 import React from "react";
 import "./Pharmacy.css";
+import { useState } from "react";
 function Pharmacyoutline({ image, name, price }) {
+  const [count, setCount] = useState(1);
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+  const handleDecrement = () => {
+    setCount((prevCount) => {
+      if (prevCount > 1) {
+        return prevCount - 1;
+      }
+      return prevCount;
+    });
+  };
+  const handleMessage = () => {
+    alert(`you have bought ${count} ${name}`);
+  };
+
   return (
     <div>
       <div className="medCard">
@@ -12,18 +30,18 @@ function Pharmacyoutline({ image, name, price }) {
           <p>${price}</p>
         </div>
         <div className="btncard">
-          <button>buy now</button>
+          <button onClick={handleMessage}>buy now</button>
         </div>
         <div className="medCart">
           <div className="btncart">
-            <button>+</button>
+            <button onClick={handleIncrement}>+</button>
           </div>
 
           <div className="btncart">
-            <p>0</p>
+            <p>{count}</p>
           </div>
           <div className="btncart">
-            <button>-</button>
+            <button onClick={handleDecrement}>-</button>
           </div>
         </div>
       </div>

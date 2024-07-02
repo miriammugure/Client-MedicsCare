@@ -1,6 +1,5 @@
 .pharmacyContainer {
   min-height: 100vh;
-  border: 2px solid red;
   padding: 2rem;
   row-gap: 1rem;
   display: flex;

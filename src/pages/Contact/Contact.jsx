@@ -33,7 +33,9 @@ function Contact() {
             </div>
             <div className="detail1">
               <MdEmail />
-              <p>mediccare@gmail.com</p>
+              <a href="mailto:miriammugure610@gmail.com">
+                <p>mediccare@gmail.com</p>
+              </a>
             </div>
             <div className="detail1">
               <CiLocationOn />

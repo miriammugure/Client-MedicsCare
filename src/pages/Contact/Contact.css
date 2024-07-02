@@ -45,12 +45,14 @@
   font-size: 1rem;
   text-transform: capitalize;
   font-weight: 700;
-  color: var(--gold-color);
+  color: var(--lightblue-color);
 }
 .fillContacts input {
   height: 2rem;
   padding: 1rem;
+  border-radius: 10px;
   width: 100%;
+  color: white;
   margin: 1rem 0rem;
   border: 2px solid white;
   text-transform: capitalize;
@@ -60,7 +62,7 @@
   color: var(--white-color);
 }
 .input-form ::placeholder {
-  color: var(--white-color);
+  color: white;
   font-family: var(--primary-font);
 }
 
@@ -72,7 +74,8 @@ textarea {
   background-color: var(--dark-green);
   color: var(--white-color);
   padding: 1rem;
-  border: 2px solid white;
+  color: white;
+  /* border: 2px solid white; */
 }
 .btnSubmit {
   background-color: var(--lightblue-color);
@@ -83,6 +86,7 @@ textarea {
   padding: 0.5rem;
   border: none;
   font-weight: 500;
+  border-radius: 10px;
   text-transform: capitalize;
   transition: all 1s ease;
 }
@@ -112,10 +116,15 @@ textarea {
   display: flex;
   align-items: center;
   text-align: center;
+
   /* justify-content: center; */
   gap: 2rem;
   padding: 2rem;
   font-family: var(--secondary-font);
+}
+.detail1 a {
+  text-decoration: none;
+  color: var(--blackish-color);
 }
 .detail1 svg {
   font-size: 2rem;
