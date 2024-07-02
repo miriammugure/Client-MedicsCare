@@ -12,6 +12,7 @@ import Contact from "./pages/Contact/Contact";
 import Patient from "./pages/Patient/Patient";
 import Expectancy from "./pages/Expectancy/Expectancy";
 import Pharmacy from "./pages/Pharmacy/Pharmacy";
+import Services from "./pages/Services/Services";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Services" element={<Services />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Contact" element={<Contact />} />

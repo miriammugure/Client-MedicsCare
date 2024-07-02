@@ -1,8 +1,8 @@
 import React from "react";
-import Title from "../../../components/Title/Title";
-import service from "../../../assets/about.jpg";
-import maternal from "../../../assets/maternal.jpg";
-import paedetric from "../../../assets/paedetric.jpeg";
+import Title from "../../components/Title/Title";
+import service from "../../assets/about.jpg";
+import maternal from "../../assets/maternal.jpg";
+import paedetric from "../../assets/paedetric.jpeg";
 import "./Services.css";
 function Services() {
   return (
@@ -10,7 +10,7 @@ function Services() {
       <div className="servicesContainer">
         <Title title={"our services"} />
         <div className="actualServices">
-          <div className="serviceContainer">
+          {/* <div className="serviceContainer">
             <div className="serviceImage">
               <img src={paedetric} alt="an image of a doctor" />
               <div className="serviceName">
@@ -27,10 +27,14 @@ function Services() {
                 </p>
               </div>
               <div className="serviceCta">
-                <button>more &rarr;</button>
+
+                <a href="/Expectancy">
+                <button>
+                  more &rarr;</button>
+                  </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="serviceContainer">
             <div className="serviceImage">
@@ -49,7 +53,9 @@ function Services() {
                 </p>
               </div>
               <div className="serviceCta">
-                <button>more &rarr;</button>
+                <a href="/Patient">
+                  <button>more &rarr;</button>
+                </a>
               </div>
             </div>
           </div>
@@ -71,7 +77,9 @@ function Services() {
                 </p>
               </div>
               <div className="serviceCta">
-                <button>more &rarr;</button>
+                <a href="/Expectancy">
+                  <button>more &rarr;</button>
+                </a>
               </div>
             </div>
           </div>

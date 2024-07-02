@@ -8,7 +8,7 @@ function Login() {
       <div className="registerContainer">
         <div className="formContainer">
           <Title title="log in here" />
-          <form action="">
+          <form action="" className="registerform">
             <label htmlFor="email">email:</label>
             <input type="text" placeholder="johndoe@example.com" />
 

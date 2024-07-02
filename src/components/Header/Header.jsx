@@ -17,7 +17,7 @@ function Header() {
             </li>
             <li>
               <Link to="/Services" className="link">
-                Services
+                services
               </Link>
             </li>
             <li>
@@ -25,12 +25,6 @@ function Header() {
                 pharmacy
               </Link>
             </li>
-            {/* <li>
-              {" "}
-              <Link to="/Doctors" className="link">
-                doctors
-              </Link>
-            </li> */}
             <li>
               {" "}
               <Link to="/Contact" className="link">
