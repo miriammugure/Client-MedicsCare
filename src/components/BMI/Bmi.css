@@ -3,8 +3,16 @@
   display: flex;
   align-items: center;
   padding: 2rem;
-  border: 2px solid white;
+  border-top: 2px solid var(--lightblue-color);
   justify-content: space-around;
+}
+@media screen and (max-width: 1120px) {
+  .bmiContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
 }
 .bmiform {
   border: 2px solid var(--lightblue-color);
@@ -21,8 +29,22 @@
   justify-content: center;
   flex-direction: column;
 }
+@media screen and (max-width: 640px) {
+  .bmiform {
+    width: 90vw;
+  }
+  .bmiimg {
+    width: 90vw;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .bmigrp input {
   width: 100%;
+  font-size: 2rem;
   padding-inline: 1rem;
   margin-bottom: 1rem;
 }
@@ -33,7 +55,6 @@
 }
 .flex {
   display: flex;
-  border: 2px solid green;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
@@ -49,10 +70,11 @@
   color: var(--lightblue-color);
 }
 .flex p {
-  border: 2px solid green;
   text-transform: capitalize;
   font-family: var(--secondary-font);
   padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 .bmiimg {
   width: 30rem;
