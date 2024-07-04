@@ -34,7 +34,7 @@
 }
 .medImg {
   width: 10rem;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* height: 20rem; */
   border-radius: 10px;
   overflow: hidden;

@@ -75,7 +75,7 @@ textarea {
   color: var(--white-color);
   padding: 1rem;
   color: white;
-  /* border: 2px solid white; */
+  border: 2px solid white;
 }
 .btnSubmit {
   background-color: var(--lightblue-color);

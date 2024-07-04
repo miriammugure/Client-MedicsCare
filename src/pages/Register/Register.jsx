@@ -1,10 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import "./Register.css";
 import Title from "../../components/Title/Title";
 import regiterimg from "../../assets/register.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 function Register() {
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     firstName: Yup.string("name must be a string").required(
       "first name is required",
@@ -14,21 +18,38 @@ function Register() {
       .email("email must be valid")
       .required("email is required"),
 
-    passWord: Yup.string("password must be a string")
+    password: Yup.string("password must be a string")
       .required("password is required")
       .min(8, "password must be atleast 8 characters long"),
   });
+  const handleSubmit = async (formValues) => {
+    try {
+      const response = await fetch("http://localhost:3000/api/users/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formValues),
+      });
+
+      const data = await response.json();
+      if (data.success === true) {
+        navigate("/Login");
+      } else {
+        setError(data.message);
+      }
+    } catch (error) {
+      console.log("Error:", error.message);
+      setError(error.message);
+    }
+  };
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       email: "",
       phoneNumber: "",
-      passWord: "",
+      password: "",
     },
-    onSubmit: (formState) => {
-      console.log(formState);
-    },
+    onSubmit: handleSubmit,
     validationSchema: validationSchema,
   });
   return (
@@ -95,26 +116,27 @@ function Register() {
             <label htmlFor="password">password:</label>
             <input
               type="password"
-              name="passWord"
-              value={formik.values.passWord}
+              name="password"
+              value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.passWord && formik.errors.passWord && (
-              <p>{formik.errors.passWord}</p>
+            {formik.touched.password && formik.errors.password && (
+              <p>{formik.errors.password}</p>
             )}
 
-            <div className="selectdropdown">
+            {/* <div className="selectdropdown">
               <p>who are you</p>
               <select id="role" name="role">
                 <option value="doctor">Doctor</option>
                 <option value="outpatient">Outpatient</option>
                 <option value="nurse">Nurse</option>
               </select>
-            </div>
+            </div> */}
 
             <button type="submit">submit</button>
           </form>
+          <p>{error}</p>
         </div>
         <div className="registerIMg">
           <img

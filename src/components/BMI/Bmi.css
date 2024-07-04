@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   padding: 2rem;
+
   border-top: 2px solid var(--lightblue-color);
   justify-content: space-around;
 }
@@ -17,13 +18,13 @@
 .bmiform {
   border: 2px solid var(--lightblue-color);
   border-radius: none;
+  border-radius: 10px;
   padding: 3rem;
   width: 40rem;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   background-color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +59,10 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+}
+.result {
+  display: flex;
+  flex-direction: column;
 }
 .flex button {
   font-weight: 800;
