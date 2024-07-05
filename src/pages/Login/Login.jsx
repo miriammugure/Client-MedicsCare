@@ -5,24 +5,42 @@ import regiterimg from "../../assets/register.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 function Login() {
-  const validationSchema = Yup.object({
-    email: Yup.string("email should be a string")
-      .email("email must be valid")
-      .required("email is required"),
+  // const validationSchema = Yup.object({
+  //   email: Yup.string("email should be a string")
+  //     .email("email must be valid")
+  //     .required("email is required"),
 
-    passWord: Yup.string("password must be a string")
-      .required("password is required")
-      .min(8, "password must be atleast 8 characters long"),
-  });
+  //     passWord: Yup.string("password must be a string")
+  //     .required("password is required")
+  //     .min(8, "password must be atleast 8 characters long"),
+  // });
+
+  const handleSubmit = async (formValues) => {
+    try {
+      const response = await fetch("http://localhost:3000/api/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formValues),
+      });
+
+      const data = await response.json();
+      if (data.success === true) {
+        navigate("/Register");
+      } else {
+        setError(data.message);
+      }
+    } catch (error) {
+      console.log("Error:", error.message);
+      setError(error.message);
+    }
+  };
   const formik = useFormik({
     initialValues: {
       email: "",
       passWord: "",
     },
-    onSubmit: (formState) => {
-      console.log(formState);
-    },
-    validationSchema: validationSchema,
+    onSubmit: handleSubmit,
+    // validationSchema: validationSchema,
   });
 
   return (
