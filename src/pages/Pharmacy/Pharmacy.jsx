@@ -7,16 +7,21 @@ function Pharmacy() {
   const [medicines, setMedicines] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/meds/medicine")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchMedicines = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/meds/medicine");
+        const data = await response.json();
         if (data.success) {
           setMedicines(data.data);
         } else {
           console.log("Error fetching medicines:", data.message);
         }
-      })
-      .catch((error) => console.log("Error fetching medicines:", error));
+      } catch (error) {
+        console.log("Error fetching medicines:", error);
+      }
+    };
+
+    fetchMedicines();
   }, []);
 
   return (
