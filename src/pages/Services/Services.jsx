@@ -53,7 +53,7 @@ function Services() {
                 </p>
               </div>
               <div className="serviceCta">
-                <a href="/Patient">
+                <a href="/Login">
                   <button>more &rarr;</button>
                 </a>
               </div>
@@ -77,7 +77,7 @@ function Services() {
                 </p>
               </div>
               <div className="serviceCta">
-                <a href="/Expectancy">
+                <a href="/Login">
                   <button>more &rarr;</button>
                 </a>
               </div>
