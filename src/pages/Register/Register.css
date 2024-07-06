@@ -51,7 +51,9 @@
   font-size: 1rem;
   font-weight: 500;
 }
-
+.linkclass {
+  color: var(--lightblue-color);
+}
 .registerform button {
   margin: 1rem;
   height: 3rem;

@@ -5,7 +5,7 @@ import Title from "../../components/Title/Title";
 import regiterimg from "../../assets/register.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -21,6 +21,8 @@ function Register() {
     password: Yup.string("password must be a string")
       .required("password is required")
       .min(8, "password must be atleast 8 characters long"),
+
+    role: Yup.string("role must be a string").required("role is required"),
   });
   const handleSubmit = async (formValues) => {
     try {
@@ -48,6 +50,7 @@ function Register() {
       email: "",
       phoneNumber: "",
       password: "",
+      role: "",
     },
     onSubmit: handleSubmit,
     validationSchema: validationSchema,
@@ -125,16 +128,31 @@ function Register() {
               <p>{formik.errors.password}</p>
             )}
 
-            {/* <div className="selectdropdown">
-              <p>who are you</p>
-              <select id="role" name="role">
-                <option value="doctor">Doctor</option>
-                <option value="outpatient">Outpatient</option>
-                <option value="nurse">Nurse</option>
+            <div className="selectdropdown">
+              <p>Who are you:</p>
+              <select
+                id="role"
+                name="role"
+                value={formik.values.role}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="" label="Select role" />
+                <option value="outpatient" label="Outpatient" />
+                <option value="expectant" label="Expectant woman" />
               </select>
-            </div> */}
+            </div>
+            {formik.touched.role && formik.errors.role && (
+              <p>{formik.errors.role}</p>
+            )}
 
-            <button type="submit">submit</button>
+            <button type="submit">register here</button>
+            <p>
+              already have an account?{" "}
+              <Link to="/Login" className="linkclass">
+                sign in here
+              </Link>
+            </p>
           </form>
           <p>{error}</p>
         </div>

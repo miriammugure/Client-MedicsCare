@@ -3,6 +3,8 @@ import "../Register/Register.css";
 import Title from "../../components/Title/Title";
 import regiterimg from "../../assets/register.jpg";
 import { useFormik } from "formik";
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
 function Login() {
   // const validationSchema = Yup.object({
@@ -14,30 +16,36 @@ function Login() {
   //     .required("password is required")
   //     .min(8, "password must be atleast 8 characters long"),
   // });
-
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = async (formValues) => {
     try {
       const response = await fetch("http://localhost:3000/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValues),
+        credentials: "include",
       });
 
       const data = await response.json();
-      if (data.success === true) {
-        navigate("/Register");
+      if (data.success) {
+        if (data.data.role === "outpatient") {
+          navigate("/Patient");
+        } else if (data.data.role === "expectant woman") {
+          navigate("/Expectancy");
+        }
       } else {
         setError(data.message);
       }
     } catch (error) {
-      console.log("Error:", error.message);
       setError(error.message);
     }
+    // };
   };
   const formik = useFormik({
     initialValues: {
       email: "",
-      passWord: "",
+      password: "",
     },
     onSubmit: handleSubmit,
     // validationSchema: validationSchema,
@@ -69,17 +77,24 @@ function Login() {
             <label htmlFor="password">password:</label>
             <input
               type="password"
-              name="passWord"
-              value={formik.values.passWord}
+              name="password"
+              value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.passWord && formik.errors.passWord && (
-              <p>{formik.errors.passWord}</p>
+            {formik.touched.password && formik.errors.password && (
+              <p>{formik.errors.password}</p>
             )}
 
-            <button type="submit">submit</button>
+            <button type="submit">log in here</button>
+            <p>
+              don't have an account?{" "}
+              <Link to="/Register" className="linkclass">
+                sign in here
+              </Link>
+            </p>
           </form>
+          <p>{error}</p>
         </div>
         <div className="registerIMg">
           <img

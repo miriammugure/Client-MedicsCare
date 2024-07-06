@@ -134,21 +134,28 @@
   justify-content: center;
 }
 .aboutBtn button {
-  background-color: var(--blackish-color);
+  background-color: #fff;
   color: var(--lightblue-color);
   border: none;
-  font-size: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  text-transform: capitalize;
-  font-family: var(--primary-font);
   transition: all 0.5s;
   cursor: pointer;
 }
+.light {
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--blackish-color);
+  font-weight: 700;
+}
 .aboutBtn button:hover {
+  .light {
+    color: #000000;
+  }
   transform: translateY(-5px);
   background-color: var(--lightblue-color);
-  color: #000;
 }
 
 @media screen and (max-width: 864px) {

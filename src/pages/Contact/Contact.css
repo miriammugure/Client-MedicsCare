@@ -101,6 +101,8 @@ textarea {
   background-color: white;
   color: var(--blackish-color);
   display: flex;
+  text-transform: capitalize;
+  font-weight: 500;
   flex-direction: column;
   box-shadow: -7px 10px 14px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -7px 10px 14px -1px rgba(0, 0, 0, 0.75);

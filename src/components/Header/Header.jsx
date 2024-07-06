@@ -34,10 +34,12 @@ function Header() {
           </ul>
         </div>
         <div className="logo">
-          <h2>medics hub</h2>
-          <div className="iconHeader">
-            <MdOutlineLocalHospital />
-          </div>
+          <Link to="/" className="logolink">
+            <h2>medics hub</h2>
+            <div className="iconHeader">
+              <MdOutlineLocalHospital />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

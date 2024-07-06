@@ -6,6 +6,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { FaMedal } from "react-icons/fa";
 import { LuCheckCircle } from "react-icons/lu";
 import aboutImg from "../../../assets/about.jpg";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -95,7 +96,11 @@ function About() {
               </div>
             </div>
             <div className="aboutBtn">
-              <button type="button">know more</button>
+              <button type="button">
+                <Link to="/Contact" className="light">
+                  Know more
+                </Link>
+              </button>
             </div>
           </div>
         </div>

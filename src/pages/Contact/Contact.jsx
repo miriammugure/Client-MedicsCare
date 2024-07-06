@@ -2,6 +2,9 @@ import React from "react";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { FaClock } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+
 import "./Contact.css";
 
 function Contact() {
@@ -40,6 +43,20 @@ function Contact() {
             <div className="detail1">
               <CiLocationOn />
               <p>located in murang'a</p>
+            </div>
+          </div>
+
+          <div className="companyDetails">
+            <h2>available on:</h2>
+
+            <div className="detail1">
+              <FaClock />
+              <p>working hours:24/7</p>
+            </div>
+            <div className="detail1">
+              <FaCalendarAlt />
+
+              <p>monday-sunday</p>
             </div>
           </div>
         </div>
