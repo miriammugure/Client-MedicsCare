@@ -7,15 +7,15 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
 function Login() {
-  // const validationSchema = Yup.object({
-  //   email: Yup.string("email should be a string")
-  //     .email("email must be valid")
-  //     .required("email is required"),
+  const validationSchema = Yup.object({
+    email: Yup.string("email should be a string")
+      .email("email must be valid")
+      .required("email is required"),
 
-  //     passWord: Yup.string("password must be a string")
-  //     .required("password is required")
-  //     .min(8, "password must be atleast 8 characters long"),
-  // });
+    password: Yup.string("password must be a string").required(
+      "password is required",
+    ),
+  });
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const handleSubmit = async (formValues) => {
@@ -35,12 +35,13 @@ function Login() {
           navigate("/Expectancy");
         }
       } else {
+        console.log(data.message);
         setError(data.message);
       }
     } catch (error) {
+      console.log(data.message);
       setError(error.message);
     }
-    // };
   };
   const formik = useFormik({
     initialValues: {
@@ -48,7 +49,7 @@ function Login() {
       password: "",
     },
     onSubmit: handleSubmit,
-    // validationSchema: validationSchema,
+    validationSchema: validationSchema,
   });
 
   return (
@@ -70,8 +71,8 @@ function Login() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-              <p>{formik.errors.phoneNumber}</p>
+            {formik.touched.email && formik.errors.email && (
+              <p>{formik.errors.email}</p>
             )}
 
             <label htmlFor="password">password:</label>

@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   padding: 2rem;
-
   border-top: 2px solid var(--lightblue-color);
   justify-content: space-around;
 }

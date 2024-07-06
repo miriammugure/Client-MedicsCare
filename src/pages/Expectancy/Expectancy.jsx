@@ -3,6 +3,7 @@ import Booking from "../../components/Booking/Booking";
 import Bmi from "../../components/BMI/Bmi";
 import dueImg from "../../assets/expectant.png";
 import "./Expectancy.css";
+
 function Expectancy() {
   return (
     <div>
