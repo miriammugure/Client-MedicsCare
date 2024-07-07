@@ -34,7 +34,7 @@ function Header() {
           </ul>
         </div>
         <div className="logo">
-          <Link to="/" className="logolink">
+          <Link to="/" className="logol">
             <h2>medics hub</h2>
             <div className="iconHeader">
               <MdOutlineLocalHospital />

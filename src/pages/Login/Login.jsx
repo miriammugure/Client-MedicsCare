@@ -91,7 +91,7 @@ function Login() {
             <p>
               don't have an account?{" "}
               <Link to="/Register" className="linkclass">
-                sign in here
+                sign up here
               </Link>
             </p>
           </form>

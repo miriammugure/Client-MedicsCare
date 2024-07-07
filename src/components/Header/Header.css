@@ -4,6 +4,8 @@
   justify-content: space-around;
   padding: 1rem 0.5rem;
   background-color: var(--blackish-color);
+  /* position: fixed;
+ width: 100vw; */
 }
 .navLinks ul {
   display: flex;
@@ -37,14 +39,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.logol {
   font-family: var(--secondary-font);
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--lightblue-color);
 }
 .logo svg {
   fill: var(--lightblue-color);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 @media screen and (max-width: 900px) {
   .navLinks ul {
